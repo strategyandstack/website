@@ -1,0 +1,127 @@
+.faq {
+  position: relative;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-4xl);
+}
+
+.headline {
+  margin-bottom: 0;
+}
+
+.accent {
+  color: var(--accent-primary);
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.item {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.item:hover {
+  border-color: var(--border-default);
+}
+
+.item.open {
+  border-color: var(--border-accent);
+}
+
+.trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  padding: var(--space-lg) var(--space-xl);
+  text-align: left;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+.question {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: var(--bg-tertiary);
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: all var(--transition-base);
+}
+
+.icon svg {
+  width: 16px;
+  height: 16px;
+  color: var(--accent-primary);
+  transition: transform var(--transition-base);
+}
+
+.item.open .icon {
+  background: var(--accent-primary);
+}
+
+.item.open .icon svg {
+  color: var(--text-inverse);
+  transform: rotate(45deg);
+}
+
+.content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--transition-base);
+}
+
+.item.open .content {
+  grid-template-rows: 1fr;
+}
+
+.answer {
+  overflow: hidden;
+}
+
+.answer p {
+  padding: 0 var(--space-xl) var(--space-xl);
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .trigger {
+    padding: var(--space-md) var(--space-lg);
+  }
+  
+  .answer p {
+    padding: 0 var(--space-lg) var(--space-lg);
+  }
+  
+  .question {
+    font-size: 1rem;
+  }
+}
+
+

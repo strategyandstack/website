@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
+import HeroSection from '../components/HeroSection';
+import ProblemSection from '../components/ProblemSection';
+import MechanismSection from '../components/MechanismSection';
+import OffersSection from '../components/OffersSection';
+import CaseStudiesSection from '../components/CaseStudiesSection';
+import ProcessSection from '../components/ProcessSection';
+import FAQSection from '../components/FAQSection';
+import FinalCTASection from '../components/FinalCTASection';
+import Footer from '../components/Footer';
+
+// Configure your booking URL here
+const BOOKING_URL = "https://calendly.com/your-link";
+---
+
+<Layout title="Strategy & Stack | From Word-of-Mouth to Predictable Acquisition">
+  <Header client:load bookingUrl={BOOKING_URL} />
+  
+  <main>
+    <HeroSection bookingUrl={BOOKING_URL} />
+    
+    <div id="problem">
+      <ProblemSection />
+    </div>
+    
+    <div id="system">
+      <MechanismSection bookingUrl={BOOKING_URL} />
+    </div>
+    
+    <div id="packages">
+      <OffersSection bookingUrl={BOOKING_URL} />
+    </div>
+    
+    <div id="results">
+      <CaseStudiesSection bookingUrl={BOOKING_URL} />
+    </div>
+    
+    <div id="process">
+      <ProcessSection bookingUrl={BOOKING_URL} />
+    </div>
+    
+    <div id="faq">
+      <FAQSection client:load />
+    </div>
+    
+    <FinalCTASection bookingUrl={BOOKING_URL} />
+  </main>
+  
+  <Footer bookingUrl={BOOKING_URL} />
+</Layout>
+
+<style>
+  main {
+    padding-top: 80px; /* Account for fixed header */
+  }
+
+  /* Smooth scroll offset for anchor links */
+  [id] {
+    scroll-margin-top: 100px;
+  }
+</style>
+
+

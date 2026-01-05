@@ -1,0 +1,148 @@
+.footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  padding: var(--space-4xl) 0 var(--space-xl);
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4xl);
+  padding-bottom: var(--space-3xl);
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: var(--space-xl);
+}
+
+.brand {
+  max-width: 320px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.logoMark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-muted));
+  border-radius: 6px;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  color: var(--text-inverse);
+}
+
+.logoText {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.tagline {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.links {
+  display: flex;
+  gap: var(--space-4xl);
+}
+
+.linkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.linkGroup h4 {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.linkGroup a {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.linkGroup a:hover {
+  color: var(--text-primary);
+}
+
+.ctaLink {
+  color: var(--accent-primary) !important;
+}
+
+.ctaLink:hover {
+  color: var(--accent-secondary) !important;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.copyright {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.legal {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.legal a {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.legal a:hover {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+    gap: var(--space-2xl);
+  }
+  
+  .brand {
+    max-width: 100%;
+  }
+  
+  .links {
+    flex-wrap: wrap;
+    gap: var(--space-2xl);
+  }
+}
+
+@media (max-width: 640px) {
+  .bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .links {
+    gap: var(--space-xl);
+  }
+}
+
+
